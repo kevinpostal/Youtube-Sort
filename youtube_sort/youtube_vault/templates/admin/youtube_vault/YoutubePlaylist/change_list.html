@@ -1,0 +1,24 @@
+{% extends "admin/change_list.html" %} {% block extrahead %}
+<style>
+  .btn-import_youtube_playlists {
+    border-radius: 15px;
+    border: none;
+    display: block;
+    float: left;
+    padding: 6px 12px;
+    background: var(--object-tools-bg);
+    color: var(--object-tools-fg);
+    font-weight: 400;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+  }
+</style>
+{% endblock %} {% block object-tools-items %} {{ block.super }}
+<li>
+  <a href="{% url 'admin:import_youtube_playlists' %}"
+    >Import Youtube Playlists</a
+  >
+</li>
+{% endblock %}
